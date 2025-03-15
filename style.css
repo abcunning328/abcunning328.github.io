@@ -1,0 +1,429 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+header {
+    text-align: center;
+    background-color: #007BFF;
+    color: white;
+    padding: 20px;
+}
+
+
+header .linkedin-icon {
+    display: inline-block;
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+header .linkedin-icon i {
+    margin-right: 10px;
+}
+
+/* Main content area */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Box layout for sections */
+.box {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* Buttons */
+.link-button {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+}
+
+.link-button:hover {
+    background-color: #0056b3;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+}
+
+/* Mad Lib Generator Section */
+.madlib-container {
+    text-align: center;
+    background-color: #28a745;
+    color: white;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.madlib-container h2 {
+    margin: 0;
+    font-size: 28px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        padding: 10px;
+    }
+
+    .profile-image {
+        width: 120px;
+        height: 120px;
+    }
+
+    .box {
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    .link-button {
+        font-size: 14px;
+        padding: 10px 15px;
+    }
+}
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #FF9A8B, #FDCB82);
+    /* Gradient background from pink to orange */
+    background-attachment: fixed;
+    /* Keeps the background fixed */
+    color: #333;
+    overflow-x: hidden;
+}
+
+/* Geometric Pattern Background */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://www.toptal.com/designers/subtlepatterns/patterns/dark-hexagons.png');
+    /* Pattern */
+    opacity: 0.1;
+    pointer-events: none;
+}
+
+/* Header Styles */
+header {
+    text-align: center;
+    background-color: #FF6F61;
+    /* Warm coral/red color */
+    color: white;
+    padding: 20px;
+}
+
+/* Profile Image Styling */
+
+.profile-image {
+    width: 200px;
+    /* Set the width for the image */
+    height: 400px;
+    /* Set the height to make it a tall rectangle */
+    object-fit: cover;
+    /* Ensures the image fills the space without stretching */
+    border-radius: 15px;
+    /* Rounded corners */
+    border: 5px solid #FF6F61;
+    /* Thick border around the image */
+
+}
+
+/* Flex Container for Title and Image */
+.profile-section {
+    display: flex;
+    align-items: center;
+    /* Center items vertically */
+    justify-content: flex-start;
+    /* Align items to the left */
+    margin: 20px 0;
+    /* Margin to give space around the section */
+}
+
+.about-title {
+    font-size: 2.5rem;
+    /* Larger text for the title */
+    font-weight: bold;
+    color: #FF6F61;
+    /* Red color to match the theme */
+    margin-right: 20px;
+    /* Space between title and image */
+}
+
+header .linkedin-icon {
+    display: inline-block;
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+header .linkedin-icon i {
+    margin-right: 10px;
+}
+
+/* Main content area */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    z-index: 2;
+    /* Ensures text is above the geometric background */
+}
+
+/* Box layout for sections */
+.box {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #FF6F61;
+    /* Red/pink tone for headings */
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* Buttons */
+.link-button {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: #FF6F61;
+    /* Coral/red color for buttons */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    /* Smooth transition for hover effect */
+}
+
+.link-button:hover {
+    background-color: #FF4F35;
+    /* Darker red for hover effect */
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #FF6F61;
+    color: white;
+}
+
+/* Mad Lib Generator Section */
+.madlib-container {
+    text-align: center;
+    background-color: #FF9A8B;
+    /* Soft pink background for this section */
+    color: white;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+}
+
+.madlib-container h2 {
+    margin: 0;
+    font-size: 28px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        padding: 10px;
+    }
+
+    .profile-image {
+        width: 120px;
+        height: 120px;
+    }
+
+    .box {
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    .link-button {
+        font-size: 14px;
+        padding: 10px 15px;
+    }
+}
+
+/* Mad Lib Story Output Section */
+#story-container {
+    background-color: #fff;
+    /* White background for the story container */
+    border: 3px solid #FF6F61;
+    /* Border color matching the theme */
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Style for the Generate Story Button */
+#generate-story-button {
+    background-color: #FF6F61;
+    /* Pink color for the button */
+    color: white;
+    /* Text color white */
+    font-weight: bold;
+    /* Make the text bold */
+    font-size: 18px;
+    /* Adjust font size */
+    padding: 12px 20px;
+    /* Padding for better button size */
+    border: none;
+    /* Remove the border */
+    border-radius: 5px;
+    /* Rounded corners */
+    cursor: pointer;
+    /* Pointer cursor on hover */
+    transition: background-color 0.3s ease;
+    /* Smooth background color transition */
+}
+
+/* Hover effect for the button */
+#generate-story-button:hover {
+    background-color: #FF4F35;
+    /* Darker pink color on hover */
+}
+
+/* Styling for the actual story text */
+#story {
+    font-size: 30px;
+    /* Larger text for the story */
+    font-weight: bold;
+    /* Bold text to make it stand out */
+    color: #FF6F61;
+    /* Red/Pink color for text */
+    line-height: 1.6;
+    padding: 15px;
+    background-color: #FF9A8B;
+    /* Soft pink background */
+    border-radius: 5px;
+    border: 2px solid #FF6F61;
+    /* Border to make it stand out */
+}
+
+/* New Story Button Styling */
+#new-story-button {
+    margin-top: 20px;
+    padding: 12px 25px;
+    background-color: #FF6F61;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+#new-story-button:hover {
+    background-color: #FF4F35;
+    /* Darker red for hover effect */
+}
+
+/* Flex Container for Title and Image */
+.profile-section {
+    display: flex;
+    align-items: center;
+    /* Center items vertically */
+    justify-content: flex-start;
+    /* Align items to the left */
+    margin: 20px 0;
+    /* Margin to give space around the section */
+}
+
+.about-title {
+    font-size: 2.5rem;
+    /* Larger text for the title */
+    font-weight: bold;
+    color: #FF6F61;
+    /* Red color to match the theme */
+    margin-right: 20px;
+    /* Space between title and image */
+}
+
+/* Profile Image Styling */
+.profile-image {
+    width: 200px;
+    /* Width of the image */
+    height: 400px;
+    /* Height to make it a tall rectangle */
+    object-fit: cover;
+    /* Ensures the image covers the space without stretching */
+    border-radius: 15px;
+    /* Rounded corners */
+    border: 5px solid #FF6F61;
+    /* Thick border around the image */
+}
+
+/* Initially hide the story container */
+.hidden {
+    display: none;
+}

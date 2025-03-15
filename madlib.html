@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Journey of a Tech Mom - Madlib Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Journey of a Tech Mom</h1>
+    </header>
+
+    <main>
+        <!-- Instructions Section -->
+        <section id="instructions">
+            <h2>Let's Create a Tech Mom Story!</h2>
+            <p>Help a tech mom navigate her way through learning to code websites in 8 weeks! Fill in the blanks with
+                the
+                requested words, and let's create a silly, techy story together!</p>
+        </section>
+
+        <!-- Mad Lib Form Section -->
+        <section id="madlib-form-container">
+            <h3>Fill in the blanks:</h3>
+            <form id="madlib-form">
+                <div class="input-group">
+                    <label for="adjective1">Adjective:</label>
+                    <input type="text" id="adjective1" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="noun1">Noun (thing):</label>
+                    <input type="text" id="noun1" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="technology">Technology:</label>
+                    <input type="text" id="technology" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="plural-noun1">Plural noun:</label>
+                    <input type="text" id="plural-noun1" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="verb1">Verb (action):</label>
+                    <input type="text" id="verb1" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="adjective2">Adjective:</label>
+                    <input type="text" id="adjective2" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="noun2">Noun (thing):</label>
+                    <input type="text" id="noun2" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="plural-noun2">Plural noun:</label>
+                    <input type="text" id="plural-noun2" required>
+                </div>
+
+                <!-- Generate Story Button -->
+                <button type="button" id="generate-story-button">Generate Story</button>
+            </form>
+        </section>
+
+        <!-- Story Output Section (Initially Hidden) -->
+        <section id="story-container" class="hidden">
+            <h2>Your Story</h2>
+            <p id="story"></p>
+            <button id="new-story-button">Create New Story</button>
+        </section>
+    </main>
+
+    <!-- JavaScript -->
+    <script>
+        // Get elements
+        const form = document.getElementById('madlib-form');
+        const storyContainer = document.getElementById('story-container');
+        const storyElement = document.getElementById('story');
+        const newStoryButton = document.getElementById('new-story-button');
+        const generateStoryButton = document.getElementById('generate-story-button');
+
+        // Add event listener to the 'Generate Story' button
+        generateStoryButton.addEventListener('click', function () {
+            // Get values from the input fields
+            const adjective1 = document.getElementById('adjective1').value;
+            const noun1 = document.getElementById('noun1').value;
+            const technology = document.getElementById('technology').value;
+            const pluralNoun1 = document.getElementById('plural-noun1').value;
+            const verb1 = document.getElementById('verb1').value;
+            const adjective2 = document.getElementById('adjective2').value;
+            const noun2 = document.getElementById('noun2').value;
+            const pluralNoun2 = document.getElementById('plural-noun2').value;
+
+            // Check if all fields are filled
+            if (!adjective1 || !noun1 || !technology || !pluralNoun1 || !verb1 || !adjective2 || !noun2 || !pluralNoun2) {
+                alert("Please fill in all fields before generating the story!");
+                return;
+            }
+
+            // Create the story
+            const story = `Once upon a time, a ${adjective1} mom decided to take an 8-week course on web development. She was eager to learn ${noun1} and build her very own website using ${technology}. 
+
+            By the third week, she had already built ${pluralNoun1} and learned to ${verb1}. It was a ${adjective2} experience! 
+
+            After the course, she felt ${adjective2} and proud of her ${noun2}, ready to take on even more ${pluralNoun2} in the tech world.`;
+
+            // Display the story and hide the form
+            storyElement.textContent = story;
+            storyContainer.classList.remove('hidden');
+            form.classList.add('hidden');
+        });
+
+        // Reset the story when "Create New Story" button is clicked
+        newStoryButton.addEventListener('click', function () {
+            form.reset();
+            storyContainer.classList.add('hidden');
+            form.classList.remove('hidden');
+        });
+    </script>
+</body>
+
+</html>
